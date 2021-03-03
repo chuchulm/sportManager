@@ -1,0 +1,78 @@
+
+
+.contenedor__registro{
+    align-items: center;
+    display: flex;
+    background-color: $white;
+    height: 100vh;
+    justify-content: center;
+    margin: auto;
+    
+  
+    
+  }
+  
+  .contenedor__wizard{
+    
+    background-color: $white;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 80vh;
+    padding: 60px;
+    width: 60vw;
+    
+  }
+  
+  
+  .steps-content {
+    
+    min-height: 350px;
+    margin-top: 1px;
+    padding-top: 30px;
+    text-align: center;
+    // background-color: #fafafa;
+    // border: 1px dashed #e9e9e9;
+    border-radius: 2px;
+  }
+    
+  .steps-action {
+    margin-top: 24px;
+    text-align: right;
+    
+  }
+  .steps{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    
+  }
+  .btn_register{
+    background-color: $red_admin;
+    border-radius: 20px;
+  }
+  
+  .icons-bimate{
+    display: flex;
+   position: absolute;
+   top: 13px;
+   left: 17px;
+   z-index: 100;
+  }
+  
+  .bimate-icon{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    color: black;
+    font-size: 35px;
+    margin-right: 39px;
+    margin-left: 0px;
+  }
+  
+  .bimate-icon1{
+    margin-left: 2px;
+  }
+  
+  .bimate-icon1{
+    padding-right: 3px ;
+  }

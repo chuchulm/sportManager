@@ -1,0 +1,22 @@
+//contrasena
+
+.div-contasena{
+    // border: 1px solid black;
+    text-align: start;
+    margin-left: 3.5em;
+  }
+  
+  .regular-input{
+    border-radius: 5px;
+    height: 35px;
+    width: 580px;
+  }
+  
+  .input-error{
+    border-radius: 5px;
+    height: 35px;
+    width: 580px;
+    border: 1px solid red;
+    color: red;
+    background: rgb(189, 157, 157) ;
+  }

@@ -1,0 +1,66 @@
+//variables
+
+$gold1:#F4BD76;
+$gold2:#F6CD8F;
+$gray:#ffffff80;
+$gray2:#f7d9d990;
+$green-btn: rgb(62, 155, 26);
+$black1: #1A1B1F;
+$black2: #30353B;
+$shadow: 0 8px 8px;
+$color_shadow: #00000033;
+$red_admin:  #da0024;
+$white: #ffff;
+$blueDfault: #172b4d;
+
+
+
+.cursor{
+   cursor: pointer;
+}
+
+
+
+// Admin
+
+
+.red_admin{
+   background-color: $red_admin;
+}
+
+.default__blue{
+   background: #172b4d;
+}
+
+.sport_manager_dashboard{
+   
+   align-items: center;
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   margin: auto;
+
+}
+
+
+.WelcomeSportManager{
+   align-items: center;
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   margin: auto;
+   max-width: 650px;
+   width: 100vw;
+   text-justify: auto;
+   
+   
+}
+
+
+
+
+
+
+
