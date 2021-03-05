@@ -1,5 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ModalScreen from '../../components/wizardModal/modalScreenSucursales'
+
+
+
+
+
+import { useDispatch, useSelector } from 'react-redux';
+import { uiCloseModal, uiOpenModal } from '../../actions/ui';
 
 
 
@@ -7,14 +14,27 @@ import ModalScreen from '../../components/wizardModal/modalScreenSucursales'
 
 const Sucursales = () => {
 
-    
 
-        
-    const [sede, setSede] = useState('');
-    const [showModal1, setShowModal1] = useState( false );
-    
+    const { data } = useSelector(state => state.sede)
    
 
+    console.log(data)
+    
+
+    const dispatch = useDispatch()
+
+    
+    const showModal = () => {
+    
+        dispatch( uiOpenModal() )
+        
+    };
+
+      const handleCancel = () => {
+        dispatch( uiCloseModal() )
+      };
+
+    
     
 
     return (
@@ -25,28 +45,38 @@ const Sucursales = () => {
                 <h4>Las sucursales son los centros deportivos que tu marca tiene o bien si eres entrenador tu nombre.</h4>
             </div>
             
-                
-            <div className="mt-4 form-sucursal">
+            <div className="mt-4 ">
                 <div className="row">
-                    <div className=" col-1 title-sede">
-                        <p>Sede:{sede}</p>
-                    </div>
-                
-                    <div className='col-8'>
-                    
-                    </div>
-                    
-                    <div className='col-2'>
-                        <i class="fas fa-pen mr-2 cursor" onClick={()=> setShowModal1(true)}></i>
-                        <i class="fas fa-trash-alt cursor" onClick={()=> setShowModal1(true)}></i>
-                    </div>
+                    <lu className=" form-sucursal"> 
+                        {
+                            data.map( sede => (
+        
+                          
+                                <li className="list-model list-group-item" key={sede.id} >
+                                   
+                                    <div>Sede:</div>
+                                    <div className="ml-5">{sede.name}</div>
+                                    <div>
+                                       <i class="fas fa-pen mr-2 cursor ml-5" onClick={ showModal }></i>
+                                       <i class="fas fa-trash-alt cursor ml-2" onClick={ handleCancel}></i>
+                                    </div>
+                                    
+                                
+                                </li>
+                           
+                            ))
+                        }
+                    </lu>
                 </div>
-            </div>
-              
-            <div className='mt-3'>
-                <ModalScreen setSede={setSede}  showModal1={showModal1} onClose={()=>setShowModal1(false)}/>
+
+                <div className=' m-top'>
+                    <ModalScreen/>
+                </div>
+
             </div>
         </div>
     )
 }
 export default Sucursales;
+
+

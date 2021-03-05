@@ -34,8 +34,8 @@ const Salas = () => {
                         <div className='col-7 '></div>
                        
                         <div className='col-2'>
-                           <i class="fas fa-pen mr-2 cursor" onClick={()=> setShowModal2(true)}></i>
-                           <i class="fas fa-trash-alt cursor"></i>
+                           <i className="fas fa-pen mr-2 cursor" onClick={()=> setShowModal2(true)}></i>
+                           <i className="fas fa-trash-alt cursor"></i>
                         </div>
                     </div>
                 </div>

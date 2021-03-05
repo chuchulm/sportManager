@@ -19,6 +19,20 @@ $blueDfault: #172b4d;
    cursor: pointer;
 }
 
+.sport-alert{
+   // background: rgb(207, 183, 183);
+   color: rgb(236, 16, 16);
+   text-align: center;
+   // font-weight: 900;
+   margin-top: 5px;
+   height: 20px;
+   border-radius: 5px;
+}
+
+.m-top{
+   margin-top: 150px;
+}
+
 
 
 // Admin
@@ -43,6 +57,8 @@ $blueDfault: #172b4d;
 }
 
 
+// Pagina de bienvenida
+
 .WelcomeSportManager{
    align-items: center;
    display: flex;
@@ -54,9 +70,26 @@ $blueDfault: #172b4d;
    max-width: 650px;
    width: 100vw;
    text-justify: auto;
+   // border: 1px solid black;
    
    
 }
+
+.box-sport-manager{
+   
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border: 1px solid black;
+   border-radius: 20px;
+   height: 500px;
+   width: 700px;
+   padding: 50px;
+   box-shadow: 5px 4px 10px .1px rgba(0,0,0,0.98), 11px 10px 13px 3px rgba(0,0,0,0.08);
+}
+
+
 
 
 

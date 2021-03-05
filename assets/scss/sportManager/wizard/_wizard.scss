@@ -14,12 +14,13 @@
   
   .contenedor__wizard{
     
-    background-color: $white;
+    
     border: 1px solid black;
     border-radius: 10px;
     height: 80vh;
     padding: 60px;
-    width: 60vw;
+    width: 50vw;
+    box-shadow: 5px 4px 10px .1px rgba(0,0,0,0.98), 11px 10px 13px 3px rgba(0,0,0,0.08);
     
   }
   
@@ -55,24 +56,118 @@
     display: flex;
    position: absolute;
    top: 13px;
-   left: 17px;
+   left: 13px;
+   z-index: 100;
+  }
+
+  .icons-bimate2{
+    display: flex;
+   position: absolute;
+   top: 13px;
+   left: 319px;
    z-index: 100;
   }
   
   .bimate-icon{
-    width: 40px;
+    
+    width: 101px;
     height: 40px;
     margin: auto;
-    color: black;
+    color: $white;
     font-size: 35px;
-    margin-right: 39px;
-    margin-left: 0px;
+  
+  
+  }
+
+  .bimate-icon1{
+    
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    color: $white;
+    font-size: 35px;
+  
+  }
+
+  .icon1{
+    margin-left: 5px;
+  }
+
+  .icon2{
+    margin-left: 7px;
+  }
+
+  
+ 
+  
+ 
+
+
+  //steps
+
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
+  
+    background: $red_admin !important;
   }
   
-  .bimate-icon1{
-    margin-left: 2px;
+  .ant-steps-item-process .ant-steps-item-icon {
+    
+    background-color: $red_admin !important;
+    border-color: $red_admin !important;
   }
   
-  .bimate-icon1{
-    padding-right: 3px ;
+  .ant-steps-item-icon {
+    
+    
+    width: 62px !important;
+    height: 62px !important;
+    margin: 0 0px 0 0;
+    font-size: 26px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    line-height: 102px;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    -webkit-transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .ant-steps-item-icon .ant-steps-icon {
+    position: relative;
+    top: 13px !important;
+    color: gray !important;
+    line-height: 100px;
+    display: none !important;
+  }
+  
+  .ant-steps-item-finish .ant-steps-item-icon {
+    
+    background-color:  $red_admin !important;
+    border-color:  $white !important;
+  }
+  
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+    
+    background: $red_admin !important
+    
+  }
+  
+  .ant-steps-item-title::after {
+    position: absolute;
+ 
+    top: 27px !important;
+    left: 100%;
+    display: block;
+    width: 800px !important;
+    height: 3px !important;
+    color: $red_admin !important;
+    background: $white !important;
+    
+  }
+
+  .ant-steps-item-wait .ant-steps-item-icon {
+    background-color: rgb(204, 204, 204) !important;
+    // border-color: rgba(0, 0, 0, 0.25);
+    border-color:  $red_admin !important;
+    
   }

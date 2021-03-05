@@ -1,71 +1,19 @@
-.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
-  
-    background: $red_admin !important;
-  }
-  
-  .ant-steps-item-process .ant-steps-item-icon {
-    
-    background-color: $red_admin !important;
-    border-color: $red_admin !important;
-  }
-  
-  .ant-steps-item-icon {
-    
-    
-    width: 62px !important;
-    height: 62px !important;
-    margin: 0 0px 0 0;
-    font-size: 26px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    line-height: 102px;
-    text-align: center;
-    
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 32px;
-    -webkit-transition: background-color 0.3s, border-color 0.3s;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-  
-  .ant-steps-item-icon .ant-steps-icon {
-    position: relative;
-    top: 13px !important;
-    color: gray !important;
-    line-height: 100px;
-    display: none !important;
-  }
-  
-  .ant-steps-item-finish .ant-steps-item-icon {
-    
-    background-color:  $red_admin !important;
-    border-color:  $red_admin !important;
-  }
-  
-  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-    
-    background-color: gray !important;
-    
-  }
-  
-  .ant-steps-item-title::after {
-    position: absolute;
-    top: 18px !important;
-    left: 100%;
-    display: block;
-    width: 9999px !important;
-    height: 10px !important;
-    background: #f0f0f0;
-    content: '';
-  }
+
   
   
   .form-sucursal{
-    // vertical-align:auto;
-    // line-height: 92px;
+    vertical-align:auto;
+    line-height: 10px;
     margin: auto;
     text-align: center;
-    border: 2px solid black;
-    width: 58%;
-    height: 30px;
+    width: 50%;
+    height: 150px;
+  }
+
+  .list-model{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
   }
   
   .title-sucursal{

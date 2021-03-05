@@ -84,16 +84,15 @@ const WizardSteps = () => {
              </Steps>
 
              <div className="icons-bimate">
-                
-                  <div className=''><i class="fas fa-map-marker-alt bimate-icon"></i></div>
-                  <div className='mr-1'><i class="fas fa-shield-alt  bimate-icon"></i></div>
-                  <div className=''><i class="far fa-flag  bimate-icon"></i></div>
-                  <div className=''><i class="far fa-list-alt  bimate-icon bimate-icon1 bimate-icon2"></i></div>
-                  <div className=''><i class="fas fa-dumbbell bimate-icon bimate-icon1"></i></div>
-                  <div className='ml-2'><i class="fas fa-user  bimate-icon bimate-icon1"></i></div>
-                  
-              
-              </div>
+                  <i class="fas fa-shield-alt  bimate-icon"></i> 
+                  <i class="fas fa-map-marker-alt bimate-icon icon2"></i>
+                  <i class="far fa-flag  bimate-icon "></i>
+            </div> 
+            <div className="icons-bimate2">
+                  <i class="fas fa-dumbbell bimate-icon1"></i>
+                  <i class="far fa-list-alt bimate-icon1 ml-2"></i>
+                  <i class="fas fa-user bimate-icon1 icon1"></i>
+            </div>
              
           </div>
           

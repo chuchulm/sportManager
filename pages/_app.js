@@ -10,6 +10,18 @@ import "assets/plugins/nucleo/css/nucleo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/scss/nextjs-argon-dashboard.scss";
 
+
+import { Provider } from "react-redux";
+import { store } from "../store/store";
+
+
+
+
+
+
+
+
+
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
   document.body.classList.add("body-page-transition");
@@ -63,7 +75,7 @@ export default class MyApp extends App {
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
     return (
-      <React.Fragment>
+      <Provider store={ store }>
         <Head>
           <meta
             name="viewport"
@@ -75,7 +87,12 @@ export default class MyApp extends App {
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </React.Fragment>
+      </Provider>
     );
   }
 }
+
+
+
+
+

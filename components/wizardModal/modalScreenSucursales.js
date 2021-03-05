@@ -2,59 +2,89 @@ import { useEffect, useState } from "react";
 import { Modal, Button, Input, Tooltip } from 'antd';
 import { InfoCircleOutlined, UserOutlined } from '@ant-design/icons';
 import { useForm } from "../../hooks/useForm";
+import { useDispatch, useSelector } from "react-redux";
+import { removeError, setError, uiCloseModal, uiOpenModal } from "../../actions/ui";
+import { sedeAddNew } from "../../actions/sedes";
+import {v4 as uuidv4} from 'uuid';
 
 
 
 
 
-const ModalScreen = ({ setSede, showModal1, onClose}) => {
+const ModalScreen = () => {
 
-  const [state, setState] = useState({loading: false, visible: false});
+  const {modalOpen } = useSelector(state => state.ui)
+  const { msgError } = useSelector(state => state.ui)
+ 
+   
+  const dispatch = useDispatch()
+   
 
-  const [formValues, handleInputChange, reset ] = useForm({
-      name:'',
-      email:'',
-      direccion:'',
-      localidad:'',
-      telefono:'',
-      horarioLunes:'',
-      horarioMartes:'',
-      horarioMiercoles:'',
-      horarioJueves:'',
-      horarioViernes:'',
-      horarioSabado:'',
-      horarioDomingo:''
+  const [{ name }, handleInputChange, reset ] = useForm({
+    name:'',
+    // email:'',
+    // direccion:'',
+    // localidad:'',
+    // telefono:'',
+    // horarioLunes:'',
+    // horarioMartes:'',
+    // horarioMiercoles:'',
+    // horarioJueves:'',
+    // horarioViernes:'',
+    // horarioSabado:'',
+    // horarioDomingo:''
   });
 
-  const { name, email, direccion, localidad, telefono, horarioLunes, horarioMartes, horarioMiercoles,horarioJueves, horarioViernes, horarioSabado, horarioDomingo } = formValues;
-  const { visible, loading } = state
+  // const { name, email, direccion, localidad, telefono, horarioLunes, horarioMartes, horarioMiercoles,horarioJueves, horarioViernes, horarioSabado, horarioDomingo } = formValues;
 
-console.log(state)
 
-useEffect(() => {
-  setState({...state, visible: showModal1})
-},[showModal1])
+   
 
   
+   
 
-
-  const handleSubmit =(e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    
 
-    setSede(name);
+    const newSede = {
+        id: uuidv4(),
+        name: name
+    }
 
-    setState({ loading: true });
+   
+     dispatch(sedeAddNew(newSede))
+
+
+    
+      if( isFormValid() ){
+        dispatch( uiCloseModal())
+        console.log("correcto")
+      }
     
   }
 
+    const isFormValid = () => {
+      
+       
+      if ( name.trim().length === 0 ){
+        dispatch( setError('name is required'))
+
+        return false;
+      }
+ 
+       dispatch( removeError())
+      return true;
+    }
+
 
   const showModal = () => {
-    setState({
-      visible: true,
-    });
     
+    dispatch( uiOpenModal() )
     
   };
+  
+  
 
   const handleOk = () => {
     setState({ loading: true });
@@ -64,8 +94,9 @@ useEffect(() => {
   };
 
   const handleCancel = () => {
-     setState({ visible: false });
-     onClose()
+
+    dispatch( uiCloseModal() )
+
   };
 
   
@@ -85,7 +116,7 @@ useEffect(() => {
         </Button>
 
         <Modal
-          visible={visible}
+          visible={modalOpen}
           title="Agregar sede"
           onOk={handleOk}
           onCancel={handleCancel}
@@ -95,7 +126,7 @@ useEffect(() => {
           Return
         </Button>,
         
-        <Button key="submit" shape="round" loading={loading} onClick={handleSubmit} style={{background: '#da0024', color: '#ffff'}} >
+        <Button key="submit" shape="round"  onClick={handleSubmit} style={{background: '#da0024', color: '#ffff'}} >
           Enviar
         </Button>,
           ]}
@@ -121,8 +152,36 @@ useEffect(() => {
                  </Tooltip>
                  }
                 />     
-      
-                <label htmlFor="">Direccion</label>
+
+                 {
+                    msgError &&
+                      (
+                        <div className="sport-alert">
+                           Debes agregar una sede!!
+                        </div>
+                      )
+                 }
+
+
+              
+              </div>
+            </div>
+          </div>
+
+          
+         
+        </Modal>
+      </>
+    );
+  
+}
+
+export default ModalScreen; 
+
+
+
+
+{/* <label htmlFor="">Direccion</label>
                 <Input
                  placeholder=""
                  type="text"
@@ -301,21 +360,4 @@ useEffect(() => {
                    <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
                  </Tooltip>
                  }
-                />     
-              </div>
-            </div>
-          </div>
-
-          
-         
-        </Modal>
-      </>
-    );
-  
-}
-
-export default ModalScreen; 
-
-
-
-
+                />      */}
