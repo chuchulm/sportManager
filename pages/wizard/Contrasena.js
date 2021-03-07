@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import { Space, Form, Input, Button } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
+
+
+
+
+
+
+
+
 const Contrasena = () => {
   const [formValues] = Form.useForm();
   const handleSubmit = (values) => {
     console.log('contrasenas correctas');
   };
   return (
-    <div>
+    <div className=" box-contrasena">
+      <div className=" caja-contrasena">
       <h1>Crea una nueva contraseña</h1>
       <Form
         name="basic"
@@ -54,6 +63,8 @@ const Contrasena = () => {
         </Form.Item>
        
       </Form>
+      </div>
+     
     </div>
   );
 };

@@ -10,6 +10,10 @@
     height: 150px;
   }
 
+  .list-group-item{
+    border: 2px solid black;
+  }
+
   .list-model{
     display: flex;
     align-items: flex-start;
@@ -31,3 +35,5 @@
     border: none;
   
   }
+
+  

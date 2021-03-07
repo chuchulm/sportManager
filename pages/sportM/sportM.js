@@ -17,7 +17,9 @@ const WelcomeSportM = () => {
 
                 <div>
                    <Link href="/wizard/wizard"  onClick={(e) => e.preventDefault()}>
-                    <small className="btn btn-danger m-auto">Siguiente</small>
+                    <div className=" boton-inicial"> 
+                        <span className='boton-inicial-span'>Siguiente</span>
+                    </div>
                    </Link>
                 </div>
             </div>

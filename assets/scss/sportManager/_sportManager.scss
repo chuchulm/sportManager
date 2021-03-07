@@ -13,7 +13,9 @@ $red_admin:  #da0024;
 $white: #ffff;
 $blueDfault: #172b4d;
 
-
+.negrita{
+   font-style: 900;
+}
 
 .cursor{
    cursor: pointer;
@@ -32,6 +34,26 @@ $blueDfault: #172b4d;
 .m-top{
    margin-top: 150px;
 }
+
+.boton-inicial{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: $red_admin;
+   border-radius: 15px;
+   width: 130px;
+   height: 30px;
+   color: $white;
+   margin: auto;
+   margin-top: 10px;
+   text-align: center;
+
+  
+}
+
+
+
+
 
 
 

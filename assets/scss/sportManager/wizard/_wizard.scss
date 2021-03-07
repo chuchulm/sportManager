@@ -17,9 +17,9 @@
     
     border: 1px solid black;
     border-radius: 10px;
-    height: 80vh;
+    height: 90vh;
     padding: 60px;
-    width: 50vw;
+    width: 70vw;
     box-shadow: 5px 4px 10px .1px rgba(0,0,0,0.98), 11px 10px 13px 3px rgba(0,0,0,0.08);
     
   }
@@ -27,7 +27,7 @@
   
   .steps-content {
     
-    min-height: 350px;
+    min-height: 500px;
     margin-top: 1px;
     padding-top: 30px;
     text-align: center;
@@ -56,7 +56,7 @@
     display: flex;
    position: absolute;
    top: 13px;
-   left: 13px;
+   left: 1.6%;
    z-index: 100;
   }
 
@@ -64,13 +64,13 @@
     display: flex;
    position: absolute;
    top: 13px;
-   left: 319px;
+   left: 56.2%;
    z-index: 100;
   }
   
   .bimate-icon{
     
-    width: 101px;
+    width: 9.6rem;
     height: 40px;
     margin: auto;
     color: $white;
@@ -81,7 +81,7 @@
 
   .bimate-icon1{
     
-    width: 100px;
+    width: 9.6rem;
     height: 40px;
     margin: auto;
     color: $white;
@@ -124,7 +124,7 @@
     margin: 0 0px 0 0;
     font-size: 26px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    line-height: 102px;
+    line-height: 10px;
     text-align: center;
     border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 32px;
@@ -157,8 +157,8 @@
  
     top: 27px !important;
     left: 100%;
-    display: block;
-    width: 800px !important;
+    display: block !important;
+    width: 200rem !important;
     height: 3px !important;
     color: $red_admin !important;
     background: $white !important;
@@ -171,3 +171,6 @@
     border-color:  $red_admin !important;
     
   }
+
+ 
+  
