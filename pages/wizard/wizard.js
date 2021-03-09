@@ -1,56 +1,50 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Steps, Button, message, Form, input, Checkbox } from 'antd';
 import 'antd/dist/antd.css';
 import Contrasena from './Contrasena';
 import Sucursales from './Sucursarles';
-import Salas      from './Salas';
+import Salas from './Salas';
 import Actividades from './Actividades';
 import Membresias from './Membresias';
-import Empleados  from './Empleados';
-
-
-
+import Empleados from './Empleados';
 
 const WizardSteps = () => {
-
   const { Step } = Steps;
 
   const steps = [
     {
       title: '',
       content: 'Crea una nueva contraseña',
-      component: <Contrasena/>
-      
+      component: <Contrasena />,
     },
     {
       title: '',
       content: 'Second-content',
-      component: <Sucursales/>
+      component: <Sucursales />,
     },
     {
       title: '',
       content: 'Last-content',
-      component: <Salas/>
+      component: <Salas />,
     },
     {
       title: '',
       content: 'First-content',
-      component: <Actividades/>
+      component: <Actividades />,
     },
     {
       title: '',
       content: 'Second-content',
-      component: <Membresias/>
+      component: <Membresias />,
     },
     {
       title: '',
       content: 'Last-content',
-      component: <Empleados/>
+      component: <Empleados />,
     },
   ];
 
-  
- const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
 
   const next = () => {
     setCurrent(current + 1);
@@ -60,58 +54,57 @@ const WizardSteps = () => {
     setCurrent(current - 1);
   };
 
-  
   return (
     <>
-     
-    
-
       <div className="contenedor__registro">
         <div className="contenedor__wizard">
-
-        
-
-
-
-
-
           <div className="steps">
-             <Steps current={current} className="steps">
-                  {steps.map(item => (
-                <Step  key={item.title} title={item.title}/>
-                        
-                  ))}
-             </Steps>
+            <Steps current={current} className="steps">
+              {steps.map((item) => (
+                <Step key={item.title} title={item.title} />
+              ))}
+            </Steps>
 
-             <div className="icons-bimate">
-                  <i class="fas fa-shield-alt  bimate-icon"></i> 
-                  <i class="fas fa-map-marker-alt bimate-icon icon2"></i>
-                  <i class="far fa-flag  bimate-icon "></i>
-            </div> 
-            <div className="icons-bimate2">
-                  <i class="fas fa-dumbbell bimate-icon1"></i>
-                  <i class="far fa-list-alt bimate-icon1 ml-2"></i>
-                  <i class="fas fa-user bimate-icon1 icon1"></i>
+            <div className="icons-bimate">
+              <i class="fas fa-shield-alt  bimate-icon"></i>
+              <i class="fas fa-map-marker-alt bimate-icon icon2"></i>
+              <i class="far fa-flag  bimate-icon "></i>
             </div>
-             
+            <div className="icons-bimate2">
+              <i class="fas fa-dumbbell bimate-icon1"></i>
+              <i class="far fa-list-alt bimate-icon1 ml-2"></i>
+              <i class="fas fa-user bimate-icon1 icon1"></i>
+            </div>
           </div>
-          
 
           <div className="steps-content">{steps[current].component}</div>
 
           <div className="steps-action">
             {current < steps.length - 1 && (
-              <Button style={{ background: '#da0024', color:'#ffff'}}  shape="round" onClick={() => next()}>
+              <Button
+                style={{ background: '#da0024', color: '#ffff' }}
+                shape="round"
+                onClick={() => next()}
+              >
                 Siguiente
               </Button>
             )}
             {current === steps.length - 1 && (
-              <Button style={{ background: '#da0024', color:'#ffff'}} shape="round" onClick={() => message.success('Processing complete!')}>
+              <Button
+                style={{ background: '#da0024', color: '#ffff' }}
+                shape="round"
+                onClick={() => message.success('Processing complete!')}
+              >
                 Done
               </Button>
             )}
             {current > 0 && (
-              <Button type="danger" style={{ margin: '0 8px', background: '#da0024', color:'#ffff'}} shape="round" onClick={() => prev()}>
+              <Button
+                type="danger"
+                style={{ margin: '0 8px', background: '#da0024', color: '#ffff' }}
+                shape="round"
+                onClick={() => prev()}
+              >
                 Previous
               </Button>
             )}
@@ -120,6 +113,6 @@ const WizardSteps = () => {
       </div>
     </>
   );
-}
+};
 
 export default WizardSteps;

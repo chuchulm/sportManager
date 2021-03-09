@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export const salaReducer = (state = initialState, action) => {
-  switch (action.type) {
+  /*   switch (action.type) {
     case types.salaAddNew:
       return {
         dataSala: [...state.dataSala, action.payload],
@@ -26,5 +26,5 @@ export const salaReducer = (state = initialState, action) => {
 
     default:
       return state;
-  }
+  } */
 };
