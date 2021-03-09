@@ -1,121 +1,97 @@
 //variables
 
-$gold1:#F4BD76;
-$gold2:#F6CD8F;
-$gray:#ffffff80;
-$gray2:#f7d9d990;
+$gold1: #f4bd76;
+$gold2: #f6cd8f;
+$gray: #ffffff80;
+$gray2: #f7d9d990;
 $green-btn: rgb(62, 155, 26);
-$black1: #1A1B1F;
-$black2: #30353B;
+$black1: #1a1b1f;
+$black2: #30353b;
 $shadow: 0 8px 8px;
 $color_shadow: #00000033;
-$red_admin:  #da0024;
+$red_admin: #da0024;
 $white: #ffff;
 $blueDfault: #172b4d;
 
-.negrita{
-   font-style: 900;
+.ne {
+  font-weight: 900;
 }
 
-.cursor{
-   cursor: pointer;
+.cursor {
+  cursor: pointer;
 }
 
-.sport-alert{
-   // background: rgb(207, 183, 183);
-   color: rgb(236, 16, 16);
-   text-align: center;
-   // font-weight: 900;
-   margin-top: 5px;
-   height: 20px;
-   border-radius: 5px;
+.sport-alert {
+  // background: rgb(207, 183, 183);
+  color: rgb(236, 16, 16);
+  text-align: center;
+  // font-weight: 900;
+  margin-top: 5px;
+  height: 20px;
+  border-radius: 5px;
 }
 
-.m-top{
-   margin-top: 150px;
+.m-top {
+  margin-top: 150px;
 }
 
-.boton-inicial{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background: $red_admin;
-   border-radius: 15px;
-   width: 130px;
-   height: 30px;
-   color: $white;
-   margin: auto;
-   margin-top: 10px;
-   text-align: center;
-
-  
+.boton-inicial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $red_admin;
+  border-radius: 15px;
+  width: 130px;
+  height: 30px;
+  color: $white;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
 }
-
-
-
-
-
-
 
 // Admin
 
-
-.red_admin{
-   background-color: $red_admin;
+.red_admin {
+  background-color: $red_admin;
 }
 
-.default__blue{
-   background: #172b4d;
+.default__blue {
+  background: #172b4d;
 }
 
-.sport_manager_dashboard{
-   
-   align-items: center;
-   display: flex;
-   height: 100vh;
-   justify-content: center;
-   margin: auto;
-
+.sport_manager_dashboard {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
 }
-
 
 // Pagina de bienvenida
 
-.WelcomeSportManager{
-   align-items: center;
-   display: flex;
-   height: 100vh;
-   justify-content: center;
-   flex-direction: column;
-   text-align: center;
-   margin: auto;
-   max-width: 650px;
-   width: 100vw;
-   text-justify: auto;
-   // border: 1px solid black;
-   
-   
+.WelcomeSportManager {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  max-width: 650px;
+  width: 100vw;
+  text-justify: auto;
+  // border: 1px solid black;
 }
 
-.box-sport-manager{
-   
-   align-items: center;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   border: 1px solid black;
-   border-radius: 20px;
-   height: 500px;
-   width: 700px;
-   padding: 50px;
-   box-shadow: 5px 4px 10px .1px rgba(0,0,0,0.98), 11px 10px 13px 3px rgba(0,0,0,0.08);
+.box-sport-manager {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 500px;
+  width: 700px;
+  padding: 50px;
+  box-shadow: 5px 4px 10px 0.1px rgba(0, 0, 0, 0.98), 11px 10px 13px 3px rgba(0, 0, 0, 0.08);
 }
-
-
-
-
-
-
-
-
-

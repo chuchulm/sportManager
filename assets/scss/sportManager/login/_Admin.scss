@@ -1,0 +1,168 @@
+    $gold1:#F4BD76;
+    $gold2:#F6CD8F;
+    $gray:#ffffff80;
+    $gray2:#f7d9d990;
+    $green-btn: rgb(62, 155, 26);
+    $black1: #1A1B1F;
+    $black2: #30353B;
+    $shadow: 0 8px 8px;
+    $color_shadow: #00000033;
+    $red_admin:  #da0024;
+    $white: #ffff;
+    $blueDfault: #172b4d;
+
+
+.cursor{
+    cursor: pointer;
+}
+
+
+
+// Admin
+
+
+.red_admin{
+    background-color: $red_admin;
+}
+
+.default__blue{
+    background: #172b4d;
+}
+
+
+// auth Login
+
+// .Login__img{
+
+//     background: #c0c0aa;  /* fallback for old browsers */
+//     background: -webkit-linear-gradient(to right, hsla(184, 100%, 55%, 0.87), hsla(60, 15%, 71%, 0)), url(../../../img/brand/logo-bima.png);  /* Chrome 10-25, Safari 5.1-6 */
+//     background: linear-gradient(to right, hsla(327, 100%, 50%, 0.116), hsla(60, 15%, 71%, 0)), url(../../../img/brand/logo-bima.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//     background-size: cover;
+//     object-fit: cover;
+//     background-position: center;
+//     background-attachment: fixed;
+//     background-repeat: no-repeat;
+//     position: relative;
+//       width: 100%;
+//       height: 700px;
+      
+//   } 
+
+
+
+
+.hero{
+    
+    width: 100vw;
+    min-height: 100vh;
+    background: $red_admin;
+}
+
+.container__hero{
+    max-width: 95vw;
+    margin: auto;
+}
+
+.nav__hero{
+    
+    color: #fff;
+    height: 150px;
+    
+    border-bottom: 1px solid rgba(253, 253, 253, 0.281);
+}
+
+.nav__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0;
+}
+
+.logo__name{
+    font-size: 24px;
+}
+
+.link{
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.link--btn--sesion{
+  
+    padding: 5px;
+    display: inline-block;
+    background: $green-btn;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    color: $white;
+    font-weight: 500;
+    box-shadow: $shadow $color_shadow;
+    width: 7em;
+    cursor: pointer;
+
+}
+
+
+.hero__main{
+    
+    height: calc(90vh - 100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0;
+}
+
+.mockup{
+    object-fit: cover;
+    width: 39%;
+    max-height: 90vh;
+    
+}
+
+.hero__textos{
+    width: 54%;
+}
+
+.title{
+    font-size: 57px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.title--active{
+    width: 50%;
+    background-color: red;
+    color: $white;
+    font-weight: 700;
+}
+
+.copy{
+    font-size: 20px;
+    color: darken($color: $white, $amount: 15);
+    text-shadow: $white  $color_shadow;
+    margin: 15px 0;
+    width: 80%;
+}
+
+.copy__active{
+    font-weight: 700;
+}
+
+.cta{
+    padding: 20px 30px;
+    display: inline-block;
+    background: $white;
+    text-decoration: none;
+    text-align: center;
+    color: $red_admin;
+    font-weight: 700;
+    box-shadow: $shadow $color_shadow;
+    border-radius: 35px;
+    width: 15em;
+}
+

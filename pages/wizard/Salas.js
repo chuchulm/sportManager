@@ -115,21 +115,19 @@ const Salas = () => {
         <h1>Agrega tus salas</h1>
         <div className="title-sucursal">
           <h4>
-            Las sucursales son los centros deportivos que tu marca tiene o bien si eres entrenador
-            tu nombre.
+            Tus centros deportivos tienen salas en donde se realizan actividades, como un Sum, Box
+            salon de musculacion ,etc
           </h4>
         </div>
 
         <div className="mt-4 ">
           <div className="row ">
-            <div className="col-9 m-auto">
+            <div className="col-12 m-auto">
               {data.map((sede) => (
                 <>
                   <div>
                     {' '}
-                    <p>
-                      <b>Sede:</b> {sede.name}
-                    </p>
+                    <h3 className="ne"> Sede: {sede.name}</h3>
                   </div>
                   <ul className=" form-sucursal">
                     {sede.salas.map((sala) => (
@@ -165,53 +163,3 @@ const Salas = () => {
   );
 };
 export default Salas;
-
-// import React, { useState } from 'react'
-// import ModalScreenSalas from '../../components/wizardModal/modalScreenSalas';
-// import { useDispatch, useSelector } from 'react-redux';
-
-// const Salas = () => {
-
-//    const { data } = useSelector(state => state.sede)
-//    const [sala1, setSala1] = useState('');
-//    const [showModal2, setShowModal2] = useState( false );
-
-//     return (
-//         <div>
-//             <div className="sucursales">
-
-//                 <h1>Crea tus Salas</h1>
-//                 <div className='title-sucursal'>
-//                    <h4>Tus centros deportivos tienen salas en donde se realizan actividades, como un SUM, BOX, salon de musculacion, etc.</h4>
-//                 </div>
-
-//                <div className=" form-sucursal">
-//                      <div className="row">
-//                         <div className=" col-1 title-sede">
-
-//                         <lu className=" form-sucursal">
-
-//                            <li className="list-model list-group-item" >
-
-//                               <div> <b>Sala:</b> <div className="ml-5"></div></div>
-
-//                                       <div>
-//                                          <i class="fas fa-pen mr-2 cursor ml-5" onClick={()=> setShowModal2(true)}></i>
-//                                          <i class="fas fa-trash-alt cursor ml-2" onClose1={()=>setShowModal2(false)}></i>
-//                                       </div>
-//                            </li>
-//                         </lu>
-//                      </div>
-//                </div>
-
-//                 <div className='mt-2'>
-//                    <ModalScreenSalas  setSala1={setSala1} showModal2={showModal2} onClose1={()=>setShowModal2(false)}/>
-//                 </div>
-
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Salas;
